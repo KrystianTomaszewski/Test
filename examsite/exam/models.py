@@ -1,5 +1,4 @@
 from django.db import models
-
 # Create your models here.
 
 class Sheet(models.Model):
@@ -21,4 +20,4 @@ class Choice(models.Model):
     choice_text = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.choice_text + '-' + str(self.votes)
+        return self.choice_text

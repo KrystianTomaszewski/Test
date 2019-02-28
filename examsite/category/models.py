@@ -1,5 +1,5 @@
 from django.db import models
-from examsite.exam.models import Sheet
+from exam.models import Sheet
 # Create your models here.
 
 class Category(models.Model):
