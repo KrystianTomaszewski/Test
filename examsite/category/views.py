@@ -6,6 +6,7 @@ from .models import Category
 
 class CategoryList(generic.ListView):
     model = Category
+    template_name = 'category/category.html'
 
     def __str__(self):
         return self.Category.name

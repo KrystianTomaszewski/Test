@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
 from .models import Sheet, Question, Choice
+from django.template import loader
 
 
 
@@ -9,6 +10,7 @@ from .models import Sheet, Question, Choice
 
 class SheetList(generic.ListView):
     model = Sheet
+    template_name = 'exam/index.html'
 
     def __str__(self):
         return self.Sheet.name
@@ -17,6 +19,7 @@ sheet_list = SheetList.as_view()
 
 class QuestionList(generic.ListView):
     model = Question
+    template_name = 'exam/question.html'
 
     def __str__(self):
         return self.Question.name
@@ -25,6 +28,7 @@ question_list = QuestionList.as_view()
 
 class ChoiceList(generic.ListView):
     model = Choice
+    template_name = 'exam/choice.html'
 
     def __str__(self):
         return self.Choice.name
