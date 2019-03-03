@@ -12,3 +12,4 @@ class CategoryList(generic.ListView):
         return self.Category.name
 
 category_list = CategoryList.as_view()
+

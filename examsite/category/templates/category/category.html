@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Choice</title>
+    <title>Category</title>
 </head>
 <body>
 
@@ -12,7 +12,7 @@
 
     {% for category in category_list %}
 
-        <li>{{ category }}</a></li>
+        <a href="{% url 'exam:index' category.id %}">{{ category }}</a>
 
     {% endfor %}
 

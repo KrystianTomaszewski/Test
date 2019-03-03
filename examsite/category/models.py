@@ -1,5 +1,7 @@
 from django.db import models
 from exam.models import Sheet
+from django.urls import reverse
+
 # Create your models here.
 
 class Category(models.Model):
