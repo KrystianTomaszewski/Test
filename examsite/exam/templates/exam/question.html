@@ -12,7 +12,7 @@
 
     {% for question in question_list %}
 
-        <a href="{% url 'exam:choice' choice.id %}">{{ question }}</a>
+        <a href="{% url 'exam:choice' question.id %}">{{ question }}</a>
 
     {% endfor %}
 

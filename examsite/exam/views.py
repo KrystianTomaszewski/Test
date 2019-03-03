@@ -28,7 +28,7 @@ question_list = QuestionList.as_view()
 
 class ChoiceList(generic.ListView):
     model = Choice
-    template_name = 'exam/question/choice.html'
+    template_name = 'exam/choice.html'
 
     def __str__(self):
         return self.Choice.name
@@ -37,14 +37,14 @@ choice_list = ChoiceList.as_view()
 
 class SheetDetail(generic.DetailView):
     model = Sheet
-    template_name = 'exam/index.html'
+    template_name = 'exam/sheet_detail.html'
 
 
 sheet_detail = SheetDetail.as_view()
 
 class QuestionDetail(generic.DetailView):
     model = Question
-    template_name = 'exam/question.html'
+    template_name = 'exam/question_detail.html'
 
 question_detail= QuestionDetail.as_view()
 
