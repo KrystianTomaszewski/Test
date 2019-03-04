@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Category</title>
+</head>
+<body>
+
+<p>TEST</p>
+
+    <ul>
+
+    {% for category in category_list %}
+
+        <a href="{% url 'exam:sheet_detail' category.id %}">{{ category }}</a>
+
+    {% endfor %}
+
+</ul>
+
+</body>
+</html>
