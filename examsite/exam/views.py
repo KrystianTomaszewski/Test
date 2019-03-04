@@ -1,8 +1,5 @@
-from django.shortcuts import render
 from django.views import generic
 from .models import Sheet, Question, Choice
-from django.template import loader
-
 
 
 
@@ -18,6 +15,7 @@ sheet_detail = SheetDetail.as_view()
 class QuestionDetail(generic.DetailView):
     model = Question
     template_name = 'exam/question_detail.html'
+
 
 question_detail= QuestionDetail.as_view()
 
